@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillFlow Invoice Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="invoice-card">
+
+            <h1>BillFlow</h1>
+
+            <h2>Create Invoice</h2>
+
+            <input type="text"
+                   id="customerName"
+                   placeholder="Customer Name">
+
+            <div id="itemsContainer">
+
+                <div class="item-row">
+
+                    <input type="text"
+                           class="productName"
+                           placeholder="Product Name">
+
+                    <input type="number"
+                           class="quantity"
+                           placeholder="Qty">
+
+                    <input type="number"
+                           class="unitPrice"
+                           placeholder="Price">
+
+                </div>
+
+            </div>
+
+            <button class="add-btn"
+                    onclick="addItem()">
+                + Add Product
+            </button>
+
+            <button class="generate-btn"
+                    onclick="generateInvoice()">
+                Generate Invoice
+            </button>
+
+            <h2>Invoice Preview</h2>
+
+            <div id="result">
+                  
+                    <p>
+                        Create an invoice or click View to see invoice details here.
+                    </p>        
+
+            </div>
+
+            <hr>
+
+            <h2>Invoice History</h2>
+
+            <button
+                id="historyBtn"
+                class="history-btn"
+                onclick="toggleInvoiceHistory()">
+
+                Load All Invoices
+
+            </button>
+
+            <br><br>
+
+            <div id="historySection" style="display:none;">
+
+                <table id="invoiceTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Total Amount</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
