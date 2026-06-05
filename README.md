@@ -1,4 +1,4 @@
-# BillFlow - Invoice Management System
+# 🧾 BillFlow - Invoice Management System
 
 BillFlow is a full-stack Invoice Management System developed using Spring Boot, MySQL, HTML, CSS, and JavaScript.
 
